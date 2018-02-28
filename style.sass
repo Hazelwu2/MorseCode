@@ -1,0 +1,115 @@
+$colorPurple: #292B73
+$colorYellow: #FFB637
+$screen-sm-min: 568px
+$screen-md-min: 768px
+
+@mixin sm
+  @media (max-width: #{$screen-sm-min})
+    @content
+@mixin md
+  @media (min-width: #{$screen-md-min})
+    @content
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+*
+	// border: 1px solid #000
+	box-sizing: border-box
+html, body
+	width: 100%
+	height: 100%
+	margin: 0
+	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)
+body
+	font-family: 'Noto Sans TC', sans-serif
+	display: flex
+	justify-content: center
+	align-items: center
+  margin: 0 auto
+ul
+  list-style: none
+  text-align: center
+  padding: 0
+.panels
+  @include sm
+    display: block
+    height: 100%
+  @include md
+    display: flex
+    width: 80%
+    max-width: 900px
+    position: relative
+    z-index: 1
+    height: 100%
+    
+.panel
+	flex: 5
+	padding: 30px
+	background-color: #fff
+	color: $colorPurple
+	box-shadow: 0px 0px 30px rgba(black, .2)
+	border-radius: 5px
+	&.yellow
+		flex: 4
+		background-color: $colorYellow
+h1, h3
+	margin: 0
+	text-align: center
+h1
+	font-weight: 700
+	margin-bottom: 30px
+h3
+	font-weight: 400
+textarea
+	width: 100%
+	padding: 10px
+	font-size: 20px
+	letter-spacing: 1px
+	outline: none
+	border: solid 2px rgba(black, .3)
+	&:focus
+		border-color: $colorPurple
+.buttons
+	display: flex
+	justify-content: center
+	margin-top: 30px
+button
+	padding: 10px 20px
+	border-radius: 0px
+	margin: 6px
+	font-size: 16px
+	font-weight: 400
+	letter-spacing: 3px
+	border: none
+	&.yellow
+		background-color: $colorYellow
+	&.purple
+		background-color: $colorPurple
+		color: white
+	&.white
+		border: solid 2px $colorPurple
+	
+.symbol
+	font-size: 24px
+	text-align: center
+	font-weight: 900
+hr
+	border: none
+	border-bottom: 3px solid $colorPurple
+.translist
+	display: flex
+	flex-direction: column
+	height: 450px
+	flex-wrap: wrap
+	li
+		margin-bottom: 5px
+		font-size: 16px
+		width: 30%
+.playlist
+	font-size: 22px
+	text-align: center
+	height: 25px
+	.playing
+		color: $colorYellow
+
+
+
+

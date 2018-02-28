@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Morse Code Translation
+    link(rel="stylesheet", href="style.css")
+  body
+    .panels
+      .panel
+        h3 Morse Code Translation
+        h1 摩斯密碼翻譯器
+        textarea#input(rows="4", placeholder = "輸入英文") MORSE
+        .symbol ⥯
+        textarea#output(row="4", placeholder = "輸入密碼")
+        .playlist
+        .buttons
+          button.purple#btnMorse 翻譯密碼
+          button.yellow#btnEng 翻譯回來
+          button.white#btnPlay 播放
+        audio.short(src="http://2017.awiclass.monoame.com/audio/morse/short.mp3")
+        audio.long(src="http://2017.awiclass.monoame.com/audio/morse/long.mp3")
+      .panel.yellow
+        h3 翻譯清單
+        hr
+        ul.translist
+      
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js")
+    script(src="main.js")
